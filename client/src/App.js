@@ -8,16 +8,23 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (event) => {
-    event.prevenDefault();
+    event.preventDefault();
     setLoading(true);
     const requestBody = { text, weirdness };
 
     const response = await fetch(
-      "https://api.giphy.com/v1/gifs/translate?api_key=YSu0JniiEIwGNO6ay2esAXbO3eRvrZwt&s=dark&weirdness=10"
+      `https://api.giphy.com/v1/gifs/translate?api_key=YSu0JniiEIwGNO6ay2esAXbO3eRvrZwt&s=${text}&weirdness=${weirdness}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(requestBody),
+      }
     );
-    console.log(response);
+
     const gif = await response.json();
+    console.log(gif);
     const src = gif.data.images.original.url;
+
     setImgURL(src);
   };
 
