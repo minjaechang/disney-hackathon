@@ -19,9 +19,9 @@ export const History = () => {
           history.map(({ text, weirdness, gif }) => (
             <div>
               {console.log("component", history)}
-              <p>{text}</p>
-              <p>{weirdness}</p>
-              <img src={gif} alt="something disney related" />
+              <p className="mood">Mood: {text}</p>
+              <p className="weirdness">Weirdness: {weirdness}</p>
+              <img src={gif} alt="something disney related" className="gif" />
             </div>
           ))
         ) : (

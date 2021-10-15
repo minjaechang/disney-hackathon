@@ -33,6 +33,7 @@ export const Home = () => {
       <form onSubmit={handleSubmit}>
         <div>
           <label>
+            Mood
             <input
               name="text"
               type="text"
@@ -44,6 +45,7 @@ export const Home = () => {
         </div>
         <div>
           <label>
+            Weird?
             <input
               name="weirdness"
               type="number"
@@ -56,7 +58,7 @@ export const Home = () => {
         <button type="submit">Submit</button>
       </form>
       <p>Disney and gifs!</p>
-      <img src={imgURL} alt="Who knows?" />
+      {imgURL && <img src={imgURL} alt="Who knows?" />}
     </div>
   );
 };
