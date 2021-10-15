@@ -29,6 +29,9 @@ export const History = () => {
           <p>Loading...</p>
         )}
       </ul>
+      <div>
+        <Link to="/">Get a gif</Link>
+      </div>
     </div>
   );
 };
