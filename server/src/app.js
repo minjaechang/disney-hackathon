@@ -23,4 +23,9 @@ app.post("/disneymood", async (req, res) => {
   return res.status(201).send(data);
 });
 
+app.get("/disneyhistory", async (req, res) => {
+  const disneyHx = await Disney.find({});
+  res.status(200).send(disneyHx);
+});
+
 module.exports = app;
