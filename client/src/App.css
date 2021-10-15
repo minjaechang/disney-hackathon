@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #cde8fd;
+}
+
 img {
   display: block;
   width: 100%;
@@ -13,6 +17,10 @@ img {
 
 div {
   margin: auto;
+}
+
+button {
+  padding: 0.2rem;
 }
 
 .App {
