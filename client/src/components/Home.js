@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 export const Home = () => {
@@ -59,6 +60,7 @@ export const Home = () => {
       </form>
       <p>Disney and gifs!</p>
       {imgURL && <img src={imgURL} alt="Who knows?" />}
+      <Link to="/history">See all gifs!</Link>
     </div>
   );
 };
