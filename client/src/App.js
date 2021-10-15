@@ -7,6 +7,9 @@ import { History } from "./components/History";
 function App() {
   return (
     <Router>
+      <div>
+        <h1>Disney and Honey Bottles</h1>
+      </div>
       <Switch>
         <Route path="/history">
           <History />

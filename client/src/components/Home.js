@@ -58,7 +58,7 @@ export const Home = () => {
         </div>
         <button type="submit">Submit</button>
       </form>
-      <p>Disney and gifs!</p>
+
       {imgURL && <img src={imgURL} alt="Who knows?" />}
       <div className="link">
         <img
