@@ -12,6 +12,8 @@ function App() {
     setLoading(true);
     const requestBody = {
       url: `https://api.giphy.com/v1/gifs/translate?api_key=YSu0JniiEIwGNO6ay2esAXbO3eRvrZwt&s=${text}-disney&weirdness=${weirdness}`,
+      text,
+      weirdness,
     };
 
     const response = await fetch("http://localhost:5000/disneymood", {
