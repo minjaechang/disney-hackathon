@@ -85,6 +85,22 @@ li {
   /* border: 1px solid darkblue; */
   box-shadow: 0 8px 6px -6px black;
 }
+.link {
+  display: grid;
+  text-align: center;
+  grid-template-columns: min-content min-content;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+.link img {
+  width: 4rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 8px 6px -6px black;
+}
+.link a {
+  width: 8rem;
+}
 
 @media only screen and (min-width: 32rem) {
   ul {

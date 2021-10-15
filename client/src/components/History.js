@@ -29,7 +29,11 @@ export const History = () => {
           <p>Loading...</p>
         )}
       </ul>
-      <div>
+      <div className="link">
+        <img
+          src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2012/1/9/0/hatk_honey-pot_s4x3.jpg.rend.hgtvcom.616.462.suffix/1371603793161.jpeg"
+          alt="Honeybottle"
+        />
         <Link to="/">Get a gif</Link>
       </div>
     </div>
