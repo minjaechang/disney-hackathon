@@ -29,7 +29,6 @@ export const History = () => {
           <p>Loading...</p>
         )}
       </ul>
-      <Link to="/">New Disney Gif?</Link>
     </div>
   );
 };
