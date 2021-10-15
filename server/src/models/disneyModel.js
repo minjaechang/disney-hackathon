@@ -20,4 +20,4 @@ const disneySchema = new Schema(
 
 const Disney = mongoose.model("Disney", disneySchema);
 
-export default Disney;
+module.exports = Disney;
