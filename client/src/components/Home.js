@@ -23,9 +23,9 @@ export const Home = () => {
     });
 
     const gif = await response.json();
-    console.log(gif);
-    const src = gif.data.images.original.url;
 
+    const src = gif.data.images.original.url;
+    setLoading(false);
     setImgURL(src);
   };
 
@@ -59,7 +59,13 @@ export const Home = () => {
         <button type="submit">Submit</button>
       </form>
 
-      {imgURL && <img src={imgURL} alt="Who knows?" />}
+      {loading ? (
+        <p>Loading...</p>
+      ) : imgURL ? (
+        <img src={imgURL} alt="Who knows?" />
+      ) : (
+        <></>
+      )}
       <div className="link">
         <img
           src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2012/1/9/0/hatk_honey-pot_s4x3.jpg.rend.hgtvcom.616.462.suffix/1371603793161.jpeg"
