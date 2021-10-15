@@ -10,16 +10,15 @@ function App() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     setLoading(true);
-    const requestBody = { text, weirdness };
+    const requestBody = {
+      url: `https://api.giphy.com/v1/gifs/translate?api_key=YSu0JniiEIwGNO6ay2esAXbO3eRvrZwt&s=${text}-disney&weirdness=${weirdness}`,
+    };
 
-    const response = await fetch(
-      `https://api.giphy.com/v1/gifs/translate?api_key=YSu0JniiEIwGNO6ay2esAXbO3eRvrZwt&s=${text}&weirdness=${weirdness}`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(requestBody),
-      }
-    );
+    const response = await fetch("http://localhost:5000/disneymood", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(requestBody),
+    });
 
     const gif = await response.json();
     console.log(gif);
@@ -31,24 +30,28 @@ function App() {
   return (
     <div className="App">
       <form onSubmit={handleSubmit}>
-        <label>
-          <input
-            name="text"
-            type="text"
-            placeholder="Enter your Disney mood?"
-            onChange={(event) => setText(event.target.value)}
-            value={text}
-          />
-        </label>
-        <label>
-          <input
-            name="weirdness"
-            type="number"
-            placeholder="How weird are you feeling today?"
-            onChange={(event) => setWeirdness(event.target.value)}
-            value={weirdness}
-          />
-        </label>
+        <div>
+          <label>
+            <input
+              name="text"
+              type="text"
+              placeholder="Enter your Disney mood?"
+              onChange={(event) => setText(event.target.value)}
+              value={text}
+            />
+          </label>
+        </div>
+        <div>
+          <label>
+            <input
+              name="weirdness"
+              type="number"
+              placeholder="How weird are you feeling today?"
+              onChange={(event) => setWeirdness(event.target.value)}
+              value={weirdness}
+            />
+          </label>
+        </div>
         <button type="submit">Submit</button>
       </form>
       <p>Disney and gifs!</p>
