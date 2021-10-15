@@ -13,16 +13,16 @@ export const History = () => {
   }, []);
 
   return (
-    <div>
+    <div className="history">
       <ul>
         {history.length ? (
           history.map(({ text, weirdness, gif }) => (
-            <div>
+            <li>
               {console.log("component", history)}
               <p className="mood">Mood: {text}</p>
               <p className="weirdness">Weirdness: {weirdness}</p>
               <img src={gif} alt="something disney related" className="gif" />
-            </div>
+            </li>
           ))
         ) : (
           <p>Loading...</p>

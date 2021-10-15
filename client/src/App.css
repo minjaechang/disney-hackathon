@@ -50,3 +50,50 @@ p {
   text-align: center;
   margin-bottom: 1rem;
 }
+
+/* history */
+.history {
+  max-width: 40rem;
+  margin: auto;
+  padding: 2rem;
+}
+
+.mood,
+.weirdness {
+  margin: 0.3rem;
+  font-size: 0.8rem;
+}
+
+.weirdness {
+  margin-bottom: 0.8rem;
+}
+
+li {
+  list-style-type: none;
+  margin-bottom: 3rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: grey;
+  /* border: 1px solid darkblue; */
+  box-shadow: 0 8px 6px -6px black;
+}
+
+@media only screen and (min-width: 32rem) {
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  ul {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+  }
+
+  .history {
+    max-width: 60rem;
+  }
+}
