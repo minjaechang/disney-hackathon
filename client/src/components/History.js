@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export const History = () => {
   const [history, setHistory] = useState([]);
@@ -28,6 +29,7 @@ export const History = () => {
           <p>Loading...</p>
         )}
       </ul>
+      <Link to="/">New Disney Gif?</Link>
     </div>
   );
 };
